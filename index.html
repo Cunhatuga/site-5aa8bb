@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><title>Crie um site sobre inteligência artificial</title>
+    <script>
+        async function inscreverEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const res = await fetch('https://nyra-api.onrender.com/subscrever/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            const msg = await res.json();
+            alert(msg.mensagem || msg.erro || 'Erro desconhecido.');
+        }
+    </script></head>
+<body><h1>Crie um site sobre inteligência artificial</h1><p>**Título: Descubra a Inteligência Artificial: O Futuro ao Seu Alcance**
+
+**Descrição:**
+Bem-vindo ao portal mais completo sobre Inteligência Artificial (IA) na web! Aqui, você encontrará tudo o que precisa saber sobre IA, desde os conceitos básicos até as últimas inovações e aplicações no mundo real. Seja você um entusiasta, um estudante, um profissional ou simplesmente curioso sobre o tema, este é o lugar para explorar, aprender e se inspirar com o potencial transformador da IA.
+
+---
+
+**Seções do Site:**
+
+1. **O que é Inteligência Artificial?**
+   - **Definição e História**
+   - **Tipos de IA**: Aprendizado de Máquina, Redes Neurais, Processamento de Linguagem Natural, etc.
+   - **Infográficos Interativos**: Visualize como a IA evoluiu ao longo dos anos.
+
+2. **Como a IA está Moldando o Futuro**
+   - **Indústria**: Automação, manufatura, logística.
+   - **Saúde**: Diagnósticos automatizados, gestão de tratamentos, robótica médica.
+   - **Educação**: Sistemas de aprendizado personalizado, tutoriais inteligentes.
+   - **Estilo de Vida**: Assistente pessoais, casas inteligentes.
+
+3. **Aprendizado e Recursos**
+   - **Cursos e Certificações**: Melhores cursos para iniciar ou aprofundar seus conhecimentos em IA.
+   - **Livros e Publicações**: Leituras essenciais recomendadas por experts.
+   - **Ferramentas e Plataformas**: Softwares e plataformas para praticar e implementar projetos de IA.
+
+4. **Ética e IA**
+   - **Desafios Éticos**: Discussões sobre privacidade, viés e governança.
+   - **Regulamentação**: Como diferentes países estão regulamentando a IA.
+   - **IA Responsável**: Iniciativas para uma IA mais segura e ética.
+
+5. **Notícias e Tendências**
+   - **Últimas Notícias**: Mantenha-se atualizado com as últimas novidades do mundo da IA.
+   - **Blog**: Artigos aprofundados, entrevistas com especialistas e análises de casos reais.
+
+6. **Comunidade**
+   - **Fórum**: Troque ideias, resolva dúvidas e colabore com outros entusiastas e profissionais.
+   - **Eventos**: Conferências, workshops e meetups sobre IA ao redor do mundo.
+   - **Newsletter**: Inscreva-se para receber atualizações regulares diretamente no seu e-mail.
+
+---
+
+**Recursos Adicionais:**
+- **Galeria de Projetos**: Explore projetos inovadores desenvolvidos com IA por profissionais e amadores.
+- **Simulador de IA**: Experimente ferramentas de IA em tempo real e veja os resultados de suas próprias entradas de dados.
+- **FAQ**: Respostas para as perguntas mais frequentes sobre inteligência artificial.
+
+**Contato:**
+- **Suporte**: Tem dúvidas ou precisa de ajuda? Nossa equipe está pronta para assisti-lo.
+- **Parcerias e Publicidade**: Interessado em anunciar ou formar uma parceria? Entre em contato conosco.
+
+---
+
+**Call to Action:**
+Não perca a oportunidade de estar na vanguarda da tecnologia. Explore nosso site, junte-se à comunidade e comece sua jornada no incrível mundo da Inteligência Artificial hoje!
+
+---
+
+Este site seria uma plataforma abrangente, projetada para educar, engajar e empoderar usuários de todos os níveis de conhecimento sobre as vastas possibilidades que a IA oferece. Com um design amigável e recursos interativos, ele visa ser o ponto de partida ideal para qualquer pessoa interessada em entender e utilizar a inteligência artificial de maneira eficaz e responsável.</p>
+<form onsubmit='inscreverEmail(event)'>
+<input type='email' id='email' placeholder='Digite seu email' required>
+<button type='submit'>Inscrever</button>
+</form></body></html>
